@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    :root{
+        --leftx:38vw;
+        --topy:10vh;
+        --sem:1;
+    }
+    .container{
+        display: flexbox;
+        border: 2px solid black;
+        border-radius:20px;
+        height: 100vh;
+        width: 100vw;
+       
+       background-color: rgb(143, 228, 193);
+       
+        
+    }
+    input[type="name"]{
+          width: 200px;
+        
+          
+    }
+    input[type="name"]:hover{
+        border: 3px solid black;
+        background-color: bisque;
+    }
+    select{
+        width: 40px;
+    }
+    select:hover{
+        border: 3px solid black;
+        background-color: bisque;
+       
+    }
+    input[type="text"]{
+        width: 40px;
+        margin:5px;
+    }
+    input[type="text"]:hover{
+        border: 2px solid black;
+        background-color: bisque;
+    }
+    input[type="submit"]{
+        margin-top: 15px;
+        margin-left: 100px;
+    }
+    input[type="submit"]:hover{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: oblique;
+        color: white;
+        border: 2px solid black;
+        background-color: red;
+    }
+    input[type="reset"]:hover{
+        color: aliceblue;
+        background-color: blueviolet;
+        /* background-color: cadetblue; */
+    }
+    .info{
+        margin-left: var(--leftx);
+        margin-top: 90px;
+        
+    }
+    h1{
+        margin-left: var(--leftx);
+    }
+    h1[type="heading"]{
+        margin-top: 50px;
+        margin-left: var(--leftx);
+    }
+
+    
+    .mark{
+        margin-left: var(--leftx);
+       
+    }
+   
+
+    .result{
+        margin-left: var(--leftx);
+    }
+    #backlock{
+        display: none;
+    }
+    #bold{
+        color:rgb(255, 183, 0);
+    }
+    #boldn{
+        color:blue;
+        
+    }
+    select#back{
+        width: 50px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1 type="heading" style="text-shadow: 3px 3px 5px white;"> &rarrlp;&nbsp;Prediction for placement</h1>
+        <h1>-------------------------------------</h1>
+        <div class="info">
+        <h3>Enter your name :- &nbsp;<input type="name" name="name" id="" placeholder="Enter name ..."></h3>
+        <h3>Select your sem is completed :-&nbsp;<select name="" id="semester" onclick="view()">
+            
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+
+        </select>  </h3>
+        <h3>
+        <div id="backlock">
+             Do you have any backlock? =<select name="" id="back">
+                 <option value="1"><b id="bold"> yes</b></option>
+                 <option value="0"><b id="boldn"> no</b></option>
+             </select>
+             </div>
+         </h3> 
+        </div>
+        
+        <div class="mark">
+        <h3 type="spi" >Enter your SPI :</h3>
+        <input type="text" name="" id="box1" placeholder="1st">
+        <input type="text" name="" id="box2" placeholder="2nd">
+        <input type="text" name="" id="box3" placeholder="3rd">
+        <input type="text" name="" id="box4" placeholder="4th">
+        </div>
+       
+        <div class="mark">
+        <input type="text" name="" id="box5" placeholder="5th">
+        <input type="text" name="" id="box6" placeholder="6th">
+        <input type="text" name="" id="box7" placeholder="7th">
+        <input type="text" name="" id="box8" placeholder="8th">
+
+    </div> 
+    <div class="result">
+      <input type="submit" value="Submit"  id="submit" onclick="result()">
+    
+    <h3 type="h3">CPI : <span id="cpi">.......</span></h3>
+    <h3 typ3="h3">CGPI : <span id="cgpi">.......</span></h3>
+     <h3>Result :  <span id="result">.......</span></h3>
+     <input type="reset" value="Reset" onclick="reset()">
+    </div>
+    </div>
+
+
+    <script>
+       
+        function view(){
+        
+       let x=document.getElementById('semester').value;
+       
+       if(x==7){
+             box8.style.display='none';
+       }
+       else if(x==6){
+         box8.style.display='none';
+         box7.style.display='none';
+       }
+       else if(x==5){
+        box8.style.display='none';
+        box7.style.display='none';
+        box6.style.display='none';
+       }
+       else if(x==4){
+         box8.style.display='none';
+         box7.style.display='none';
+         box6.style.display='none';
+         box5.style.display='none';
+       }
+       else if(x==3){
+        box8.style.display='none';
+        box7.style.display='none';
+        box6.style.display='none';
+        box5.style.display='none';
+        box4.style.display='none';
+       }
+       else if(x==2){
+        box8.style.display='none';
+        box7.style.display='none';
+        box6.style.display='none';
+        box5.style.display='none';
+        box4.style.display='none';
+        box3.style.display='none';
+       }
+       else if(x==1){
+        box8.style.display='none';
+        box7.style.display='none';
+        box6.style.display='none';
+        box5.style.display='none';
+        box4.style.display='none';
+        box3.style.display='none';
+        box2.style.display='none';
+       }
+       
+       if(x==1 || x==2 || x==3 || x==4 || x==5 || x==6 || x==7 || x==8){
+        var b=backlock.style.display='block';
+       }
+    
+    }
+
+    function result(){
+    let x=document.getElementById('semester').value;
+      let a1=document.getElementById('box1').value;
+      let a2=document.getElementById('box2').value;
+      let a3=document.getElementById('box3').value;
+      let a4=document.getElementById('box4').value;
+      let a5=document.getElementById('box5').value;
+      let a6=document.getElementById('box6').value;
+      let a7=document.getElementById('box7').value;
+      let a8=document.getElementById('box8').value;
+
+      let a=a1/1 +a2/1 +a3/1 +a4/1 +a5/1 +a6/1 +a7/1 +a8/1;
+      let g=a5/1 +a6/1 +a7/1 +a8/1;
+      let b=a/1 / x/1;
+      let c=x-4;
+      if(x>1){
+        document.getElementById('cpi').innerHTML=b;
+      }
+      if(x==5){
+        document.getElementById('cgpi').innerHTML=g; 
+      }
+      if(x==6){
+        document.getElementById('cgpi').innerHTML=g/2; 
+      }
+      if(x==7){
+        document.getElementById('cgpi').innerHTML=g/3; 
+      }
+      if(x==8){
+        document.getElementById('cgpi').innerHTML=g/4; 
+      }
+      
+      if(document.getElementById('back').value==1 || c<1 || g/c<7.5 || x<6 ){
+        document.getElementById('result').innerHTML="Sorry !! You are not eligible for placement..";
+      }
+      if(document.getElementById('back').value==0 && c>=1 && g/c>7.5 && x>=6){
+        document.getElementById('result').innerHTML="Congratulations !! You are eligible for placement.";
+      }
+      if(isNaN(a) || a1>10 || a2>10 || a3>10 || a4>10 || a5>10 || a6>10 || a7>10 || a8>10|| a1<0 || a2<0 || a3<0 || a4<0 || a5<0 || a6<0 || a7<0 || a8<0){
+        document.getElementById('result').innerHTML="Please Check filling details.." 
+      }
+   
+    }
+
+    function reset(){
+        location.reload();
+    }
+    </script>
+</body>
+</html>
